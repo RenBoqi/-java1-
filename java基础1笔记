@@ -330,13 +330,19 @@ Abstract class Demo
 new Demo(){
 	void show()
 	{}	
-}
+}.show();
 
 匿名子类对象，new 父类或者接口，然后override内部方法
 
+通常使用场景之一
+当函数参数是接口类型时候，且接口中方法不超过三个 （方法过多阅读性差）
+可以使用匿名内部类
 
-
-
+Object obj =new Object(){
+	public void show()
+	{sop()}
+}
+obj.show() 会挂掉，因为匿名内部类子类被向上升级了，升级过后子类的方法访问被限制了
 
 
 
